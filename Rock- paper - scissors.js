@@ -77,11 +77,16 @@ resultDiv.innerText='DRAW'
 if(totalScore['playerScore']== 5){
   endGame()
   resultDiv.innerText = 'You Won'
-  endGameButton.style.animation ='reset'
+  totalScoreDiv.style.visibility =' hidden'
+  resultDiv.style.fontSize = 'larger'
+  computerScoreDiv.style.visibility =' hidden'
+
 }else if(totalScore['computerScore'] == 5){
   endGame()
     resultDiv.innerText = 'Computer Won'
-   endGameButton.style.animation ='reset'
+    totalScoreDiv.style.visibility =' hidden'
+    computerScoreDiv.style.visibility =' hidden'
+    resultDiv.style.fontSize = 'larger'
 }
   
 
@@ -128,5 +133,7 @@ const totalScoreDiv = document.getElementById("totalScore")
   resultDiv.innerText = ''
   totalScore['playerScore'] =0
   totalScore['computerScore']=0
+  totalScoreDiv.style.visibility =' visible'
+    computerScoreDiv.style.visibility =' visible'
 }
 playGame()
